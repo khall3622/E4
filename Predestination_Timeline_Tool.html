@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predestination Timeline Teaching Tool</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    h1 { text-align: center; }
+    nav { text-align: center; margin-bottom: 20px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #007BFF; font-weight: bold; }
+    .timeline-container { display: flex; flex-direction: column; align-items: center; }
+    .event { background: white; border-left: 6px solid #007BFF; margin: 10px; padding: 15px; width: 60%; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .event.arminius { border-color: #dc3545; }
+    .event.synod { border-color: #6c757d; }
+    .event.augustine { border-color: #17a2b8; }
+    .event.pelagius { border-color: #fd7e14; }
+    .year { font-weight: bold; color: #555; }
+    .quote { font-style: italic; margin-top: 5px; color: #333; }
+    .key-idea { background: #e9f7ef; border-left: 4px solid #28a745; padding: 10px; margin-top: 10px; font-size: 0.95em; }
+    .question { background: #fff3cd; padding: 10px; margin-top: 10px; border-left: 4px solid #ffc107; }
+  </style>
+</head>
+<body>
+  <h1>Calvin, Arminius, Augustine, Pelagius, and the Synod of Dort</h1>
+
+  <nav>
+    <a href="#pelagius">Pelagius</a>
+    <a href="#augustine">Augustine</a>
+    <a href="#calvin">Calvin</a>
+    <a href="#arminius">Arminius</a>
+    <a href="#synod">Synod of Dort</a>
+  </nav>
+
+  <div class="timeline-container">
+    <div class="event pelagius" id="pelagius">
+      <div class="year">410 - Pelagius: Commentary on Romans</div>
+      <div class="quote">"Whenever I do good, it is not God who works in me but I who do it myself."</div>
+      <div class="key-idea">Key Idea: Pelagius denied original sin and taught that human beings are capable of choosing good without divine grace.</div>
+      <div class="question" id="quiz-q2">
+        <strong>Quiz:</strong> What was a key teaching of Pelagius regarding human nature?<br>
+        <input type="radio" name="q2" value="wrong" onclick="showAnswer('q2')"> That grace is irresistible<br>
+        <input type="radio" name="q2" value="wrong" onclick="showAnswer('q2')"> That we are incapable of good without God<br>
+        <input type="radio" name="q2" value="correct" onclick="showAnswer('q2')"> That humans can choose good without divine help<br>
+        <div id="answer-q2" style="display:none; margin-top:5px; font-weight:bold; color:green;">✅ Correct answer: That humans can choose good without divine help.</div>
+      </div>
+    </div>
+
+    <div class="event augustine" id="augustine">
+      <div class="year">418 - Augustine: Against Two Letters of the Pelagians</div>
+      <div class="quote">"It is not because men believe that they are elected, but in order that they may believe, they are elected."</div>
+      <div class="key-idea">Key Idea: Augustine argued that God's grace is necessary for even the first steps of faith, and that election is unconditional.</div>
+    </div>
+
+    <div class="event calvin" id="calvin">
+      <div class="year">1559 - Calvin: Institutes Final Edition</div>
+      <div class="quote">"All are not created on equal terms, but some are preordained to eternal life, others to eternal damnation."</div>
+      <div class="key-idea">Key Idea: Calvin emphasized God's sovereign choice in election — not based on anything foreseen in humans.</div>
+    </div>
+
+    <div class="event arminius" id="arminius">
+      <div class="year">1608 - Arminius: Declaration of Sentiments</div>
+      <div class="quote">"Predestination is an eternal and gracious decree of God in Christ, by which He determines to justify and adopt believers."</div>
+      <div class="key-idea">Key Idea: Arminius believed God's election is based on foreseen faith, preserving human responsibility.</div>
+      <div class="question" id="quiz-q1">
+        <strong>Quiz:</strong> Who believed that election depends on God's foresight of faith?<br>
+        <input type="radio" name="q1" value="wrong" onclick="showAnswer('q1')"> Calvin<br>
+        <input type="radio" name="q1" value="wrong" onclick="showAnswer('q1')"> Synod of Dort<br>
+        <input type="radio" name="q1" value="correct" onclick="showAnswer('q1')"> Arminius<br>
+        <div id="answer-q1" style="display:none; margin-top:5px; font-weight:bold; color:green;">✅ Correct answer: Arminius.</div>
+      </div>
+    </div>
+
+    <div class="event synod" id="synod">
+      <div class="year">1619 - Synod of Dort</div>
+      <div class="quote">"Election is the unchangeable purpose of God whereby, before the foundation of the world, He has out of mere grace... chosen... unto salvation."</div>
+      <div class="key-idea">Key Idea: The Synod of Dort reaffirmed Calvinistic views against Arminianism, especially unconditional election.</div>
+    </div>
+
+    <div class="event">
+      <div class="question" id="quiz-q3">
+        <strong>Quiz:</strong> What did Augustine argue was necessary even for the beginning of faith?<br>
+        <input type="radio" name="q3" value="wrong" onclick="showAnswer('q3')"> Human free will<br>
+        <input type="radio" name="q3" value="correct" onclick="showAnswer('q3')"> God's grace<br>
+        <input type="radio" name="q3" value="wrong" onclick="showAnswer('q3')"> Church membership<br>
+        <div id="answer-q3" style="display:none; margin-top:5px; font-weight:bold; color:green;">✅ Correct answer: God's grace.</div>
+      </div>
+
+      <div class="question" id="quiz-q4">
+        <strong>Quiz:</strong> Which council reaffirmed the doctrine of unconditional election?<br>
+        <input type="radio" name="q4" value="wrong" onclick="showAnswer('q4')"> Council of Trent<br>
+        <input type="radio" name="q4" value="correct" onclick="showAnswer('q4')"> Synod of Dort<br>
+        <input type="radio" name="q4" value="wrong" onclick="showAnswer('q4')"> Vatican II<br>
+        <div id="answer-q4" style="display:none; margin-top:5px; font-weight:bold; color:green;">✅ Correct answer: Synod of Dort.</div>
+      </div>
+
+      <div class="question gap-fill">
+        <strong>Gap Fill Exercise:</strong><br>
+        Fill in the blanks:<br><br>
+        <em>According to Augustine, _______ is required even to begin to believe. Augustine believed that human nature was _______ by sin.</em><br>
+        <em>Calvin taught that election is unconditional.</em><br>
+        <em>Pelagius taught that humans could choose good without needing _______. Pelagius believed humans are born _______.</em><br>
+        <em>Arminius believed God had not decreed, without respect to sin and disobedience, anyone to eternal _______.</em><br><br>
+        <label>1. <input type="text" placeholder="Your answer here"></label><br>
+        <label>2. <input type="text" placeholder="Your answer here"></label><br>
+        <label>3. <input type="text" placeholder="Your answer here"></label><br>
+        <label>4. <input type="text" placeholder="Your answer here"></label><br>
+        <label>5. <input type="text" placeholder="Your answer here"></label><br><br>
+        <button onclick="validateAnswers()">Submit Answers</button>
+      </div><br>
+
+      <button onclick="resetAll()" style="margin: 10px auto; display: block;">Reset All</button>
+
+<script>
+let attemptCount = 0;
+
+function validateAnswers() {
+  const answers = ['grace', 'corrupted', 'grace', 'neutral', 'death'];
+  const inputs = document.querySelectorAll('.gap-fill input');
+  let allCorrect = true;
+
+  inputs.forEach((input, i) => {
+    const userAnswer = input.value.trim().toLowerCase();
+    const correctAnswer = answers[i];
+
+    if (userAnswer === correctAnswer) {
+      input.style.borderColor = 'green';
+    } else {
+      input.style.borderColor = 'red';
+      allCorrect = false;
+    }
+  });
+
+  let resultDiv = document.getElementById('gap-fill-result');
+  if (!resultDiv) {
+    resultDiv = document.createElement('div');
+    resultDiv.id = 'gap-fill-result';
+    resultDiv.style.marginTop = '15px';
+    resultDiv.style.fontWeight = 'bold';
+    document.querySelector('.gap-fill').appendChild(resultDiv);
+  }
+
+  resultDiv.textContent = allCorrect
+    ? '✅ All answers are correct!'
+    : '❌ Some answers are incorrect. Please try again.';
+
+  attemptCount++;
+  if (!allCorrect && attemptCount >= 2) {
+    let revealDiv = document.getElementById('gap-fill-answers');
+    if (!revealDiv) {
+      revealDiv = document.createElement('div');
+      revealDiv.id = 'gap-fill-answers';
+      revealDiv.style.marginTop = '10px';
+      revealDiv.style.backgroundColor = '#f1f1f1';
+      revealDiv.style.padding = '10px';
+      revealDiv.style.border = '1px solid #ccc';
+      revealDiv.innerHTML = '<strong>Correct Answers:</strong><br>' +
+        '1. grace<br>2. corrupted<br>3. grace<br>4. neutral<br>5. death';
+      document.querySelector('.gap-fill').appendChild(revealDiv);
+    }
+  }
+}
+
+function showAnswer(questionId) {
+  const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+  const value = selected ? selected.value : null;
+  const answerDiv = document.getElementById(`answer-${questionId}`);
+
+  if (!answerDiv) return;
+
+  if (value === 'correct') {
+    answerDiv.innerHTML = '✅ Correct answer: ' + answerDiv.textContent.split(': ')[1];
+    answerDiv.style.color = 'green';
+  } else {
+    answerDiv.innerHTML = '❌ Incorrect. Correct answer: ' + answerDiv.textContent.split(': ')[1];
+    answerDiv.style.color = 'red';
+  }
+  answerDiv.style.display = 'block';
+}
+
+function resetAll() {
+  const inputs = document.querySelectorAll('.gap-fill input');
+  inputs.forEach(input => {
+    input.value = '';
+    input.style.borderColor = '';
+  });
+
+  const gapResult = document.getElementById('gap-fill-result');
+  if (gapResult) gapResult.remove();
+  const gapAnswers = document.getElementById('gap-fill-answers');
+  if (gapAnswers) gapAnswers.remove();
+  attemptCount = 0;
+
+  const radios = document.querySelectorAll('input[type="radio"]');
+  radios.forEach(r => r.checked = false);
+
+  const answers = document.querySelectorAll('[id^="answer-"]');
+  answers.forEach(div => {
+    div.style.display = 'none';
+    const originalText = div.textContent.split(': ')[1];
+    div.innerHTML = '✅ Correct answer: ' + originalText;
+    div.style.color = 'green';
+  });
+}
+</script>
+
+</body>
+</html>
